@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileTechGroupAssignment">
         <activity
+            android:name=".TextReader"
+            android:exported="false" />
+        <activity
+            android:name=".ContentReader"
+            android:exported="false" />
+        <activity
+            android:name=".BarcodeReader"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
