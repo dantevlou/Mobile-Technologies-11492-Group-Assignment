@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -26,43 +27,28 @@ public class MainActivity extends AppCompatActivity {
         });
 
         ImageButton buttonBarcodeReader = findViewById(R.id.barcodeReaderButton);
-        buttonBarcodeReader.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, BarcodeReader.class);
-//                intent.putExtra("message", "Hello World!");
-                startActivity(intent);
-            }
+        buttonBarcodeReader.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, BarcodeReader.class);
+            startActivity(intent);
         });
 
         ImageButton buttonContentReader = findViewById(R.id.contentReaderButton);
-        buttonContentReader.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ContentReader.class);
-//                intent.putExtra("message", "Hello World!");
-                startActivity(intent);
-            }
+        buttonContentReader.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ContentReader.class);
+            startActivity(intent);
         });
 
         ImageButton buttonTextReader = findViewById(R.id.textReaderButton);
-        buttonTextReader.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TextReader.class);
-//                intent.putExtra("message", "Hello World!");
-                startActivity(intent);
-            }
+        buttonTextReader.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, TextReader.class);
+            startActivity(intent);
         });
 
         Button buttonAnalysedList = findViewById(R.id.analysedListButton);
-        buttonAnalysedList.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AnalysedImages.class);
- //             intent.putExtra("message", "Hello World!");
-                startActivity(intent);
-            }
+        buttonAnalysedList.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, AnalysedImages.class);
+            startActivity(intent);
         });
+
     }
 }

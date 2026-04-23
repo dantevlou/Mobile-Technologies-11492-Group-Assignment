@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileTechGroupAssignment">
         <activity
+            android:name=".EditAndSave"
+            android:exported="false" />
+        <activity
+            android:name=".Camera"
+            android:exported="false" />
+        <activity
+            android:name=".Gallary"
+            android:exported="false" />
+        <activity
+            android:name=".RealtimeDatabaseActivity"
+            android:exported="false" />
+        <activity
             android:name=".AnalysedImages"
             android:exported="false" />
         <activity
