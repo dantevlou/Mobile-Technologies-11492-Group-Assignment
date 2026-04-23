@@ -55,16 +55,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // for the analysis button
-//        Button buttonAnalysedList = findViewById(R.id.analysedListButton);
-//        buttonAnalysedList.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(MainActivity.this, "the page you want to go to".class);
-// //             intent.putExtra("message", "Hello World!");
-//                startActivity(intent);
-//            }
-//        });
+        Button buttonAnalysedList = findViewById(R.id.analysedListButton);
+        buttonAnalysedList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AnalysedImages.class);
+ //             intent.putExtra("message", "Hello World!");
+                startActivity(intent);
+            }
+        });
     }
-
 }
