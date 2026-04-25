@@ -2,6 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,28 +21,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileTechGroupAssignment">
         <activity
-            android:name=".EditAndSave"
+            android:name=".DisplayItemActivity"
             android:exported="false" />
         <activity
-            android:name=".Camera"
+            android:name=".ListViewActivity"
             android:exported="false" />
         <activity
-            android:name=".Gallary"
+            android:name=".EditSaveActivity"
             android:exported="false" />
         <activity
-            android:name=".RealtimeDatabaseActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AnalysedImages"
-            android:exported="false" />
-        <activity
-            android:name=".TextReader"
-            android:exported="false" />
-        <activity
-            android:name=".ContentReader"
-            android:exported="false" />
-        <activity
-            android:name=".BarcodeReader"
+            android:name=".MLKitActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
