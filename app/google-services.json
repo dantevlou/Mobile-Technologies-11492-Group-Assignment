@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "936744891921",
+    "firebase_url": "https://assignment1mobiletech-default-rtdb.firebaseio.com",
+    "project_id": "assignment1mobiletech",
+    "storage_bucket": "assignment1mobiletech.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936744891921:android:f6aac77f4ab7d852dfa3b0",
+        "android_client_info": {
+          "package_name": "com.example.mobiletechgroupassignment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAN6CKvYzQmI_vkN2OT2j_N1niuyCfLWfE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,8 @@
 package com.example.mobiletechgroupassignment;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +22,28 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public void openBarcodeReader(View view) {
+        Intent intent = new Intent(MainActivity.this, MLKitActivity.class);
+        intent.putExtra("reader", "Barcode Reader");
+        startActivity(intent);
+    }
+
+    public void openContentReader(View view) {
+        Intent intent = new Intent(MainActivity.this, MLKitActivity.class);
+        intent.putExtra("reader", "Content Reader");
+        startActivity(intent);
+    }
+
+    public void openTextReader(View view) {
+        Intent intent = new Intent(MainActivity.this, MLKitActivity.class);
+        intent.putExtra("reader", "Text Reader");
+        startActivity(intent);
+    }
+
+    public void openListView(View view) {
+        Intent intent = new Intent(MainActivity.this, ListViewActivity.class);
+        startActivity(intent);
     }
 }
