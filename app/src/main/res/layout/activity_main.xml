@@ -8,120 +8,116 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textViewTitle"
-        android:layout_width="0dp"
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:text="Tap an item below to start"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="10dp"
+        android:text="Content Reader"
+        android:textAlignment="center"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textAlignment="center"
-        android:textColor="#3F51B5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barcodeReaderButton" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="10dp"
+        android:text="Tap an Item Below to Start"
+        android:textColor="#3f51b5"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewBarcode"
-        android:layout_width="0dp"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="10dp"
         android:text="Barcode Reader"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <ImageView
-        android:id="@+id/imageViewBarcode"
+    <ImageButton
+        android:id="@+id/contentReaderButton"
         android:layout_width="0dp"
         android:layout_height="111dp"
         android:layout_marginStart="77dp"
-        android:layout_marginTop="0dp"
         android:layout_marginEnd="77dp"
-        android:onClick="openBarcodeReader"
-        android:scaleType="fitXY"
-        android:src="@drawable/barcode"
+        android:backgroundTint="#FCF5FD"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewBarcode" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:srcCompat="@drawable/contentreaderbutton" />
 
-    <TextView
-        android:id="@+id/textViewContent"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:text="Content Reader"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewBarcode" />
-
-    <ImageView
-        android:id="@+id/imageViewContent"
+    <ImageButton
+        android:id="@+id/barcodeReaderButton"
         android:layout_width="0dp"
         android:layout_height="111dp"
         android:layout_marginStart="77dp"
-        android:layout_marginTop="0dp"
         android:layout_marginEnd="77dp"
-        android:onClick="openContentReader"
-        android:scaleType="fitXY"
-        android:src="@drawable/content"
+        android:backgroundTint="#FCF5FD"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewContent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/barcodereaderbutton" />
 
     <TextView
-        android:id="@+id/textViewText"
-        android:layout_width="0dp"
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="10dp"
         android:text="Text Reader"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewContent" />
+        app:layout_constraintTop_toBottomOf="@+id/contentReaderButton" />
 
-    <ImageView
-        android:id="@+id/imageViewText"
+    <ImageButton
+        android:id="@+id/textReaderButton"
         android:layout_width="0dp"
         android:layout_height="111dp"
         android:layout_marginStart="77dp"
-        android:layout_marginTop="0dp"
         android:layout_marginEnd="77dp"
-        android:onClick="openTextReader"
-        android:scaleType="fitXY"
-        android:src="@drawable/text"
+        android:backgroundTint="#FCF5FD"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewText" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:srcCompat="@drawable/textreaderbutton" />
 
     <Button
-        android:id="@+id/buttonListAnalysedImages"
+        android:id="@+id/analysedListButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="66dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="66dp"
-        android:onClick="openListView"
         android:text="List of Analysed Images"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewText" />
+        app:layout_constraintTop_toBottomOf="@+id/textReaderButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

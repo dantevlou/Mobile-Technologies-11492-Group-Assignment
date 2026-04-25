@@ -3,6 +3,8 @@ package com.example.mobiletechgroupassignment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,33 +19,36 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-    }
 
-    public void openBarcodeReader(View view) {
-        Intent intent = new Intent(MainActivity.this, MLKitActivity.class);
-        intent.putExtra("reader", "Barcode Reader");
-        startActivity(intent);
-    }
+        ImageButton buttonBarcodeReader = findViewById(R.id.barcodeReaderButton);
+        buttonBarcodeReader.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, BarcodeReader.class);
+            startActivity(intent);
+        });
 
-    public void openContentReader(View view) {
-        Intent intent = new Intent(MainActivity.this, MLKitActivity.class);
-        intent.putExtra("reader", "Content Reader");
-        startActivity(intent);
-    }
+        ImageButton buttonContentReader = findViewById(R.id.contentReaderButton);
+        buttonContentReader.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ContentReader.class);
+            startActivity(intent);
+        });
 
-    public void openTextReader(View view) {
-        Intent intent = new Intent(MainActivity.this, MLKitActivity.class);
-        intent.putExtra("reader", "Text Reader");
-        startActivity(intent);
-    }
+        ImageButton buttonTextReader = findViewById(R.id.textReaderButton);
+        buttonTextReader.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, TextReader.class);
+            startActivity(intent);
+        });
 
-    public void openListView(View view) {
-        Intent intent = new Intent(MainActivity.this, ListViewActivity.class);
-        startActivity(intent);
+        Button buttonAnalysedList = findViewById(R.id.analysedListButton);
+        buttonAnalysedList.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, AnalysedImages.class);
+            startActivity(intent);
+        });
+
     }
 }
